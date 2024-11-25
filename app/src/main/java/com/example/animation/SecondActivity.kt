@@ -40,7 +40,11 @@ class SecondActivity : AppCompatActivity() {
         passwordET = findViewById(R.id.passwordET)
 
         val moveBottomToTop = AnimationUtils.loadAnimation(applicationContext, R.anim.move_bottom_to_top)
+        val appearance = AnimationUtils.loadAnimation(applicationContext, R.anim.appearance)
         registrationLL.startAnimation(moveBottomToTop)
+        loginET.startAnimation(appearance)
+        passwordET.startAnimation(appearance)
+        registrationBTN.startAnimation(appearance)
         val moveTopToBottom = AnimationUtils.loadAnimation(applicationContext, R.anim.move_top_to_bottom)
         titleTV.startAnimation(moveTopToBottom)
 
